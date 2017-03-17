@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Snail����</title>
+  <subtitle>���ּ���</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://jzm1994.github.com/"/>
+  <updated>2017-03-17T11:31:38.555Z</updated>
+  <id>https://jzm1994.github.com/</id>
+  
+  <author>
+    <name>JZM</name>
+    <email>zm.jin@qq.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://jzm1994.github.com/2017/03/17/first/"/>
+    <id>https://jzm1994.github.com/2017/03/17/first/</id>
+    <published>2017-03-17T11:29:40.342Z</published>
+    <updated>2017-03-17T11:31:38.555Z</updated>
+    
+    <content type="html"><![CDATA[<p>#我的第一篇博客</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#我的第一篇博客&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
