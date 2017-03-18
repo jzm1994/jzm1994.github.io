@@ -12,7 +12,7 @@
     <entry>
       <title><![CDATA[Hexo+GitHub搭建博客坑点]]></title>
       <url>%2F2017%2F03%2F18%2FHexo-GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9D%91%E7%82%B9%2F</url>
-      <content type="text"><![CDATA[##]]></content>
+      <content type="text"><![CDATA[Hexo博客，解析不了标题（#）markdown标题标准写法需要在”#”和后面字符之间加一个空格1## hello world localhost: 4000测试不成功hexo s：启动本地服务 Ctrl+c指的是关闭服务 hexo g: 执行报错命令需要在init后的文件夹内执行]]></content>
     </entry>
 
     
