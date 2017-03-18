@@ -40,15 +40,16 @@
     <link href="https://jzm1994.github.com/2017/03/18/Hexo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>https://jzm1994.github.com/2017/03/18/Hexo-GitHub搭建个人博客/</id>
     <published>2017-03-17T22:44:54.000Z</published>
-    <updated>2017-03-18T01:49:44.279Z</updated>
+    <updated>2017-03-18T01:53:18.124Z</updated>
     
     <content type="html"><![CDATA[<p>hexo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hoxo官网</a></p>
 <p>##环境搭建</p>
 <p>####安装Git<br><a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git下载</a></p>
-<p>####安装Node<br>两种方式安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>  :<br><a id="more"></a></p>
+<p>####安装Node<br>两种方式安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>  :  </p>
 <ol>
 <li>使用Git Bash的方式<br> $curl <a href="https://raw.github.com/creationix/nvm/master/install.sh" target="_blank" rel="external">https://raw.github.com/creationix/nvm/master/install.sh</a> | sh<br> $ nvm install stable （安装完成后需要执行该命令来重启终端）  </li>
-<li>通过下载安装程序<br>注意安装时，勾选Add to PATH选项<br>####安装Hexo<br>Node和Git都安装好后，可执行如下命令安装hexo：<br> npm install -g hexo<br>##GitHub  </li>
+<li>通过下载安装程序<br>注意安装时，勾选Add to PATH选项<a id="more"></a>  
+####安装Hexo<br>Node和Git都安装好后，可执行如下命令安装hexo：<br> npm install -g hexo<br>##GitHub  </li>
 </ol>
 <ul>
 <li>注册GitHub帐号 </li>
@@ -94,7 +95,10 @@ About: /about
       &lt;p&gt;hexo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。&lt;br&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/index.html&quot;&gt;hoxo官网&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;##环境搭建&lt;/p&gt;
 &lt;p&gt;####安装Git&lt;br&gt;&lt;a href=&quot;https://git-for-windows.github.io/&quot;&gt;Git下载&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;####安装Node&lt;br&gt;两种方式安装&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;  :&lt;br&gt;
+&lt;p&gt;####安装Node&lt;br&gt;两种方式安装&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;  :  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用Git Bash的方式&lt;br&gt; $curl &lt;a href=&quot;https://raw.github.com/creationix/nvm/master/install.sh&quot;&gt;https://raw.github.com/creationix/nvm/master/install.sh&lt;/a&gt; | sh&lt;br&gt; $ nvm install stable （安装完成后需要执行该命令来重启终端）  &lt;/li&gt;
+&lt;li&gt;通过下载安装程序&lt;br&gt;注意安装时，勾选Add to PATH选项
     
     </summary>
     
