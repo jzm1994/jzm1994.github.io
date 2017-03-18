@@ -59,6 +59,40 @@
   <header>
     
       <div class="icon"></div>
+      <a href="/2017/03/18/Hexo-GitHub搭建博客坑点/">
+  <time datetime="2017-03-18T01:25:53.000Z">
+    2017-03-18
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2017/03/18/Hexo-GitHub搭建博客坑点/">Hexo+GitHub搭建博客坑点</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>##</p>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
       <a href="/2017/03/18/Hexo-GitHub搭建个人博客/">
   <time datetime="2017-03-17T22:44:54.000Z">
     2017-03-18
@@ -74,56 +108,18 @@
   
   <div class="entry">
     
-      <p>hexo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hoxo官网</a></p>
+      <p>hexo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br><a href="https://hexo.io/zh-cn/docs/index.html">hoxo官网</a></p>
 <p>##环境搭建</p>
-<p>####安装Git<br><a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git下载</a></p>
-<p>####安装Node<br>两种方式安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>  :  </p>
-<ol>
-<li>使用Git Bash的方式<br> $curl <a href="https://raw.github.com/creationix/nvm/master/install.sh" target="_blank" rel="external">https://raw.github.com/creationix/nvm/master/install.sh</a> | sh<br> $ nvm install stable （安装完成后需要执行该命令来重启终端）  </li>
-<li>通过下载安装程序<br>注意安装时，勾选Add to PATH选项<br>####安装Hexo<br>Node和Git都安装好后，可执行如下命令安装hexo：<br> npm install -g hexo<br>##GitHub  </li>
-</ol>
-<ul>
-<li>注册GitHub帐号 </li>
-<li>建立一个与用户名对应的仓库，格式必须是[usename.github.io]  </li>
-<li>添加ssh公钥 [Setting -&gt; SSH and GPG keys -&gt; New SSH key]  </li>
-<li>验证添加成功<br>  ssh -T git@github.com<br>####获取公钥详解  <blockquote>
-<p>打开git bash<br>执行生成公钥和私钥的命令：ssh-keygen -t rsa 并按回车3下（为什么按三下，是因为有提示你是否需要设置密码，如果设置了每次使用Git都会用到密码，一般都是直接不写为空，直接回车就好了）。会在一个文件夹里面生成一个私钥 id_rsa和一个公钥id_rsa.pub。<br>执行查看公钥的命令：cat ~/.ssh/id_rsa.pub<br>##查看博客  </p>
-</blockquote>
-</li>
-<li>初始化<br>  hexo init <folder><br>或者cd到目标目录，执行hexo init  </folder></li>
-<li>生成静态页面<br>  hexo g  </li>
-<li><p>本地启动<br>  hexo s<br><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>可查看效果<br>##安装主题<br>  git clone <a href="https://github.com/heroicyang/hexo-theme-modernist.git" target="_blank" rel="external">https://github.com/heroicyang/hexo-theme-modernist.git</a> themes/modernist<br>安装完成后，打开hexo_config.yml，修改主题为modernist<br>  theme: modernist<br>打开hexo\themes\modernist目录，编辑主题配置文件_config.yml：  </p>
-<!-- lang:java -->
-<p>  menu: #配置页头显示哪些菜单</p>
-<h1 id="Home"><a href="#Home" class="headerlink" title="Home: /"></a>Home: /</h1><pre><code>Archives: /archives
-Reading: /reading
-About: /about
-</code></pre><h1 id="Guestbook-about"><a href="#Guestbook-about" class="headerlink" title="Guestbook: /about"></a>Guestbook: /about</h1><p>  excerpt_link: Read More #摘要链接文字<br>  archive_yearly: false #按年存档<br>  widgets: #配置页脚显示哪些小挂件</p>
-<pre><code>- category
-</code></pre><h1 id="tag"><a href="#tag" class="headerlink" title="- tag"></a>- tag</h1><pre><code>- tagcloud
-- recent_posts
-</code></pre><h1 id="blogroll"><a href="#blogroll" class="headerlink" title="- blogroll"></a>- blogroll</h1><p>  blogrolls: #友情链接</p>
-<pre><code>- bruce sha&apos;s duapp wordpress: http://ibruce.duapp.com
-- bruce sha&apos;s javaeye: http://buru.iteye.com
-- bruce sha&apos;s oschina blog: http://my.oschina.net/buru
-- bruce sha&apos;s baidu space: http://hi.baidu.com/iburu
-</code></pre><p>  fancybox: true #是否开启fancybox效果<br>  duoshuo_shortname: buru #多说账号<br>  google_analytics:<br>  rss:<br>##细节配置<br>####图标<br>在hexo\themes\modernist\layout_partial\head.ejs下，找到这句：<br><link rel="icon" type="image/x-icon" href="<%- config.root %>favicon.ico"><br>将favicon.ico放到工程hexo\source目录下。可以在<a href="http://www.faviconer.com/" target="_blank" rel="external">Faviconer</a>制作ico图标，国内有<a href="http://www.bitbug.net/" target="_blank" rel="external">比特虫</a>。<br>####统计<br><a href="http://ibruce.info/2013/12/22/count-views-of-hexo/" target="_blank" rel="external">为hexo博客添加访问次数统计功能</a><br>####评论<br><a href="http://duoshuo.com/" target="_blank" rel="external">多说第三方评论系统</a><br>在modernist_config.yml中配置duoshuo_shortname二级域名中的shortname即可<br>复制代码粘贴到hexo\themes\modernist\layout_partial\comment.ejs里面：  </p>
-<!-- lang:java -->
-<p>  &lt;% if (config.disqus_shortname &amp;&amp; page.comments){ %&gt;<br>  <section id="comment"></section></p>
-<pre><code>#代码
-</code></pre><p>  &lt;% } %&gt;<br>####分享<br>分享服务商： <a href="http://www.jiathis.com/" target="_blank" rel="external">加网</a>，<a href="http://www.bshare.cn/" target="_blank" rel="external">bShare</a>，<a href="http://share.baidu.com/" target="_blank" rel="external">百度分享</a>。<br>加网添加方式： </p>
-</li>
-<li><p>在hexo\themes\modernist\layout_partial\post下新建jiathis.ejs文件  </p>
-</li>
-<li>注册加网获得你的分享代码，写入jiathis.ejs  </li>
-<li>在hexo\themes\modernist\layout_partial\article.ejs中，添加&lt;%-partial(‘post/jiathis’)%&gt;。<br>####404<br>GitHub Pages自定义404页面直接在根目录下创建404.html。404页面仅对绑定顶级域名的项目才起作用，GitHub默认分配的二级域名和使用hexo s在本机调试都不起作用。<br><a href="http://www.qq.com/404" target="_blank" rel="external">腾讯公益404</a><br>####图床<br>####插件<br>####自定义页面<br>  hexo new page “about”<br>##目录<br>##更新<br>更新hexo:<br>  npm update -g hexo<br>更新主题:<!-- java.lang -->
-  cd themes/modernist<br>  git pull<br>更新插件:<br>  npm update<br>##申请域名</li>
-</ul>
-
+<p>####安装Git<br><a href="https://git-for-windows.github.io/">Git下载</a></p>
+<p>####安装Node<br>两种方式安装<a href="https://nodejs.org/en/">Node.js</a>  :<br>
     
   </div>
   <footer class="end-sep">
     
+      
+        <div class="alignleft">
+          <a href="/2017/03/18/Hexo-GitHub搭建个人博客/#more" class="more-link">阅读全文</a>
+        </div>
       
       
     
