@@ -54,7 +54,7 @@
     <link href="https://jzm1994.github.com/2017/03/18/Hexo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>https://jzm1994.github.com/2017/03/18/Hexo-GitHub搭建个人博客/</id>
     <published>2017-03-17T22:44:54.000Z</published>
-    <updated>2017-03-18T01:53:18.124Z</updated>
+    <updated>2017-03-18T06:38:30.762Z</updated>
     
     <content type="html"><![CDATA[<p>hexo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hoxo官网</a></p>
 <p>##环境搭建</p>
@@ -116,6 +116,10 @@ About: /about
     
     </summary>
     
+      <category term="Hexo" scheme="https://jzm1994.github.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://jzm1994.github.com/tags/Hexo/"/>
     
   </entry>
   
