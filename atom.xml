@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jzm1994.github.com/"/>
-  <updated>2017-03-19T21:04:35.286Z</updated>
+  <updated>2017-03-19T22:01:41.633Z</updated>
   <id>https://jzm1994.github.com/</id>
   
   <author>
@@ -14,6 +14,72 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图片加载框架 Glide</title>
+    <link href="https://jzm1994.github.com/2017/03/20/%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E6%A1%86%E6%9E%B6-Glide/"/>
+    <id>https://jzm1994.github.com/2017/03/20/图片加载框架-Glide/</id>
+    <published>2017-03-19T21:07:08.000Z</published>
+    <updated>2017-03-19T22:01:41.633Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>在泰国举行的谷歌开发者论坛上，谷歌为我们介绍了一个名叫 Glide 的图片加载库，作者bumptech。这个库被广泛的运用在google的开源项目中，包括2014年google I/O大会上发布的官方app。<br><a href="https://github.com/bumptech/glide" target="_blank" rel="external">Github地址</a><br><a id="more"></a></p>
+<h2 id="一-简介"><a href="#一-简介" class="headerlink" title="一 简介"></a>一 简介</h2><ul>
+<li>使用简单</li>
+<li>可配置度高，自适应程度高</li>
+<li>支持常见图片格式 jpg png gif webp</li>
+<li>支持多种数据源 网络、本地、资源、Assets 等</li>
+<li>高效缓存策略 支持Memory和Disk图片缓存 默认Bitmap格式采用RGB_565内存使用至少减少一半</li>
+<li>生命周期集成 根据Activity/Fragment生命周期自动管理请求</li>
+<li>高效处理Bitmap 使用Bitmap Pool使Bitmap复用，主动调用recycle回收需要回收的Bitmap，减小系统回收压力  </li>
+</ul>
+<h2 id="二-功能"><a href="#二-功能" class="headerlink" title="二 功能"></a>二 功能</h2><h4 id="1-简单使用"><a href="#1-简单使用" class="headerlink" title="1. 简单使用"></a>1. 简单使用</h4><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Glide</span></div><div class="line">    <span class="selector-class">.with</span>(this)</div><div class="line">    <span class="selector-class">.load</span>(<span class="string">"http://inthecheesefactory.com/uploads/source/nestedfragment/fragments.png"</span>)</div><div class="line">    <span class="selector-class">.into</span>(imageView);</div></pre></td></tr></table></figure>
+<h4 id="2-Glide-with-使用"><a href="#2-Glide-with-使用" class="headerlink" title="2. Glide.with()使用"></a>2. Glide.with()使用</h4><ul>
+<li>with(Context context)：使用Application上下文，Glide请求将不受Activity/Fragment生命周期控制。</li>
+<li>with(Activity activity)：使用Activity作为上下文，Glide的请求会受到Activity生命周期控制。</li>
+<li>with(FragmentActivity activity)：Glide的请求会受到FragmentActivity生命周期控制。</li>
+<li>with(android.app.Fragment fragment)：Glide的请求会受到Fragment 生命周期控制。</li>
+<li>with(android.support.v4.app.Fragment fragment)：Glide的请求会受到Fragment生命周期控制。</li>
+</ul>
+<h4 id="3-load-使用"><a href="#3-load-使用" class="headerlink" title="3. load()使用"></a>3. load()使用</h4><blockquote>
+<p>Glide基本可以load任何可以拿到的媒体资源<br>SD卡资源：load(“file://“+ Environment.getExternalStorageDirectory().getPath()+”/test.jpg”)<br>assets资源：load(“file:///android_asset/f003.gif”)<br>raw资源：load(“Android.resource://com.frank.glide/raw/raw_1”)或load(“android.resource://com.frank.glide/raw/“+R.raw.raw_1)<br>drawable资源：load(“android.resource://com.frank.glide/drawable/news”)或load(“android.resource://com.frank.glide/drawable/“+R.drawable.news)<br>ContentProvider资源：load(“content://media/external/images/media/139469”)<br>http资源：load(“<a href="http://img.my.csdn.NET/uploads/201508/05/1438760757_3588.jpg" target="_blank" rel="external">http://img.my.csdn.NET/uploads/201508/05/1438760757_3588.jpg</a>“)<br>https资源：load(“<a href="https://img.alicdn.com/tps/TB1uyhoMpXXXXcLXVXXXXXXXXXX-476-538.jpg_240x5000q50.jpg_.webp" target="_blank" rel="external">https://img.alicdn.com/tps/TB1uyhoMpXXXXcLXVXXXXXXXXXX-476-538.jpg_240x5000q50.jpg_.webp</a>“)<br><strong>注意: load不限于String类型</strong><br>还可以是：load(Uri uri)，load(File file)，load(Integer resourceId)，load(URL url)，load(byte[] model)，load(T model)，loadFromMediaStore(Uri uri)。</p>
+</blockquote>
+<h4 id="4-重要功能"><a href="#4-重要功能" class="headerlink" title="4. 重要功能"></a>4. 重要功能</h4><ol>
+<li>禁止内存缓存： .skipMemoryCache(true)</li>
+<li>清除内存缓存：  // 必须在UI线程中调用 Glide.get(context).clearMemory();</li>
+<li>禁止磁盘缓存： .diskCacheStrategy(DiskCacheStrategy.NONE)</li>
+<li>清除磁盘缓存： // 必须在后台线程中调用，建议同时clearMemory()<br> <code>Glide.get(applicationContext).clearDiskCache();</code></li>
+<li>获取缓存大小：<br> <code>new GetDiskCacheSizeTask(textView).execute(new File(getCacheDir(), DiskCache.Factory.DEFAULT_DISK_CACHE_DIR));</code></li>
+<li><p>指定资源的优先加载顺序：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Glide</div><div class="line">    .with(context)</div><div class="line">    .load(heroImageUrl)</div><div class="line">    .priority(Priority.HIGH)</div><div class="line">    .into(imageViewHero);</div><div class="line">//后加载</div><div class="line">Glide</div><div class="line">    .with(context)</div><div class="line">    .load(itemImageUrl)</div><div class="line">    .priority(Priority.LOW)</div><div class="line">    .into(imageViewItem);</div></pre></td></tr></table></figure>
+</li>
+<li><p>先显示缩略图，再显示原图：</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//用原图的<span class="number">1</span>/<span class="number">10</span>作为缩略图</div><div class="line">    Glide</div><div class="line"><span class="meta">        .with</span>(this)</div><div class="line"><span class="meta">        .load</span>(<span class="string">"http://inthecheesefactory.com/uploads/source/nestedfragment/fragments.png"</span>)</div><div class="line"><span class="meta">        .thumbnail</span>(<span class="number">0.</span>1f)</div><div class="line"><span class="meta">        .into</span>(iv_0)<span class="comment">;</span></div><div class="line"></div><div class="line">    //用其它图片作为缩略图</div><div class="line">    DrawableRequestBuilder&lt;Integer&gt; thumbnailRequest = Glide</div><div class="line"><span class="meta">        .with</span>(this)</div><div class="line"><span class="meta">        .load</span>(R.drawable.news)<span class="comment">;</span></div><div class="line"></div><div class="line">    Glide.with(this)</div><div class="line"><span class="meta">        .load</span>(<span class="string">"http://inthecheesefactory.com/uploads/source/nestedfragment/fragments.png"</span>)</div><div class="line"><span class="meta">        .thumbnail</span>(thumbnailRequest)</div><div class="line"><span class="meta">        .into</span>(iv_0)<span class="comment">;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>对图片进行裁剪、模糊、滤镜等处理：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//圆形裁剪</span></div><div class="line">   Glide.with(<span class="keyword">this</span>)</div><div class="line">       .load(<span class="string">"http://inthecheesefactory.com/uploads/source/nestedfragment/fragments.png"</span>)</div><div class="line">       .bitmapTransform(<span class="keyword">new</span> CropCircleTransformation(<span class="keyword">this</span>))</div><div class="line">       .<span class="keyword">into</span>(iv_0);</div><div class="line"></div><div class="line">   <span class="comment">//圆角处理</span></div><div class="line">   Glide.with(<span class="keyword">this</span>)</div><div class="line">       .load(<span class="string">"http://inthecheesefactory.com/uploads/source/nestedfragment/fragments.png"</span>)</div><div class="line">       .bitmapTransform(<span class="keyword">new</span> RoundedCornersTransformation(<span class="keyword">this</span>,<span class="number">30</span>,<span class="number">0</span>, RoundedCornersTransformation.CornerType.ALL))</div><div class="line">       .<span class="keyword">into</span>(iv_0);</div><div class="line"></div><div class="line">   <span class="comment">//灰度处理</span></div><div class="line">   Glide.with(<span class="keyword">this</span>)</div><div class="line">       .load(<span class="string">"http://inthecheesefactory.com/uploads/source/nestedfragment/fragments.png"</span>)</div><div class="line">       .bitmapTransform(<span class="keyword">new</span> GrayscaleTransformation(<span class="keyword">this</span>))</div><div class="line">       .<span class="keyword">into</span>(iv_0);</div><div class="line">   <span class="comment">//其它变换...</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>对请求状态进行监听：</p>
+</li>
+<li>对资源的下载进度进行监听： </li>
+</ol>
+<h2 id="三-使用步骤"><a href="#三-使用步骤" class="headerlink" title="三 使用步骤"></a>三 使用步骤</h2><h4 id="1-在build-gradle中添加依赖："><a href="#1-在build-gradle中添加依赖：" class="headerlink" title="1. 在build.gradle中添加依赖："></a>1. 在build.gradle中添加依赖：</h4><p><code>compile &#39;com.github.bumptech.glide:glide:3.7.0&#39;</code></p>
+<h4 id="2-如果你的项目没有support-v4库，还需要添加support-v4依赖："><a href="#2-如果你的项目没有support-v4库，还需要添加support-v4依赖：" class="headerlink" title="2. 如果你的项目没有support-v4库，还需要添加support-v4依赖："></a>2. 如果你的项目没有support-v4库，还需要添加support-v4依赖：</h4><p><code>compile &#39;com.android.support:support-v4:23.3.0&#39;</code></p>
+<h4 id="3-如果使用变换，可以添加一个自定义的变换库"><a href="#3-如果使用变换，可以添加一个自定义的变换库" class="headerlink" title="3. 如果使用变换，可以添加一个自定义的变换库"></a>3. 如果使用变换，可以添加一个自定义的变换库</h4><p>github网址：<a href="https://github.com/wasabeef/glide-transformations" target="_blank" rel="external">https://github.com/wasabeef/glide-transformations</a><br>添加依赖：<br><code>compile &#39;jp.wasabeef:glide-transformations:2.0.1&#39;</code><br>If you want to use the GPU Filters<br><code>compile &#39;jp.co.cyberagent.android.gpuimage:gpuimage-library:1.3.0&#39;</code></p>
+<h2 id="四-参考博客"><a href="#四-参考博客" class="headerlink" title="四 参考博客"></a>四 参考博客</h2><p><a href="http://blog.csdn.net/shangmingchao/article/details/51125554" target="_blank" rel="external">http://blog.csdn.net/shangmingchao/article/details/51125554</a><br><a href="http://www.cnblogs.com/whoislcj/p/5558168.html" target="_blank" rel="external">http://www.cnblogs.com/whoislcj/p/5558168.html</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h4&gt;&lt;p&gt;在泰国举行的谷歌开发者论坛上，谷歌为我们介绍了一个名叫 Glide 的图片加载库，作者bumptech。这个库被广泛的运用在google的开源项目中，包括2014年google I/O大会上发布的官方app。&lt;br&gt;&lt;a href=&quot;https://github.com/bumptech/glide&quot;&gt;Github地址&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="图片加载框架" scheme="https://jzm1994.github.com/categories/%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="Photos" scheme="https://jzm1994.github.com/tags/Photos/"/>
+    
+  </entry>
   
   <entry>
     <title>MarkdownPad 注册码</title>
