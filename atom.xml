@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jzm1994.github.com/"/>
-  <updated>2017-03-19T15:44:13.007Z</updated>
+  <updated>2017-03-19T15:47:15.427Z</updated>
   <id>https://jzm1994.github.com/</id>
   
   <author>
@@ -20,14 +20,13 @@
     <link href="https://jzm1994.github.com/2017/03/18/%E5%9B%BE/"/>
     <id>https://jzm1994.github.com/2017/03/18/图/</id>
     <published>2017-03-18T06:08:05.000Z</published>
-    <updated>2017-03-19T15:44:13.007Z</updated>
+    <updated>2017-03-19T15:47:15.427Z</updated>
     
-    <content type="html"><![CDATA[<p>摘要<br><a id="more"></a> </p>
-]]></content>
+    <content type="html"><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><a id="more"></a> ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;摘要&lt;br&gt;
+      &lt;h2 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h2&gt;
     
     </summary>
     
@@ -39,9 +38,9 @@
     <link href="https://jzm1994.github.com/2017/03/18/Hexo-GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9D%91%E7%82%B9/"/>
     <id>https://jzm1994.github.com/2017/03/18/Hexo-GitHub搭建博客坑点/</id>
     <published>2017-03-18T01:25:53.000Z</published>
-    <updated>2017-03-19T15:43:39.303Z</updated>
+    <updated>2017-03-19T15:46:51.482Z</updated>
     
-    <content type="html"><![CDATA[<p>摘要<br><a id="more"></a> </p>
+    <content type="html"><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><a id="more"></a> 
 <h4 id="Hexo博客，解析不了标题（-）"><a href="#Hexo博客，解析不了标题（-）" class="headerlink" title="Hexo博客，解析不了标题（#）"></a>Hexo博客，解析不了标题（#）</h4><p>markdown标题标准写法需要在”#”和后面字符之间加一个空格<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">## hello world</div></pre></td></tr></table></figure></p>
 <h4 id="localhost-4000测试不成功"><a href="#localhost-4000测试不成功" class="headerlink" title="localhost: 4000测试不成功"></a>localhost: 4000测试不成功</h4><p>hexo s：启动本地服务  Ctrl+c指的是关闭服务  </p>
 <h4 id="hexo-g-执行报错"><a href="#hexo-g-执行报错" class="headerlink" title="hexo g: 执行报错"></a>hexo g: 执行报错</h4><p>命令需要在init后的文件夹内执行</p>
@@ -49,7 +48,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;摘要&lt;br&gt;
+      &lt;h2 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h2&gt;
     
     </summary>
     
@@ -63,9 +62,10 @@
     <link href="https://jzm1994.github.com/2017/03/18/Hexo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>https://jzm1994.github.com/2017/03/18/Hexo-GitHub搭建个人博客/</id>
     <published>2017-03-17T22:44:54.000Z</published>
-    <updated>2017-03-19T15:43:29.051Z</updated>
+    <updated>2017-03-19T15:46:46.986Z</updated>
     
-    <content type="html"><![CDATA[<p>摘要<br><a id="more"></a><br>hexo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hoxo官网</a></p>
+    <content type="html"><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><a id="more"></a>  
+<p>hexo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hoxo官网</a></p>
 <h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git下载</a></p>
 <h4 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h4><p>两种方式安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>  :  </p>
 <ol>
@@ -99,7 +99,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;摘要&lt;br&gt;
+      &lt;h2 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h2&gt;
     
     </summary>
     
