@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jzm1994.github.com/"/>
-  <updated>2017-03-19T15:56:45.957Z</updated>
+  <updated>2017-03-19T21:04:35.286Z</updated>
   <id>https://jzm1994.github.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MarkdownPad 注册码</title>
+    <link href="https://jzm1994.github.com/2017/03/20/MarkdownPad-%E6%B3%A8%E5%86%8C%E7%A0%81/"/>
+    <id>https://jzm1994.github.com/2017/03/20/MarkdownPad-注册码/</id>
+    <published>2017-03-19T20:54:56.000Z</published>
+    <updated>2017-03-19T21:04:35.286Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><a id="more"></a>
+<p><strong>邮箱：</strong></p>
+<p>Soar360@live.com</p>
+<p><strong>授权秘钥：</strong></p>
+<p>GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8<br>qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi<br>2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/      QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/  ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h4&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="https://jzm1994.github.com/categories/Android/"/>
+    
+    
+      <category term="markdown" scheme="https://jzm1994.github.com/tags/markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>图</title>
@@ -38,7 +65,7 @@
     <link href="https://jzm1994.github.com/2017/03/18/Hexo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>https://jzm1994.github.com/2017/03/18/Hexo-GitHub搭建个人博客/</id>
     <published>2017-03-17T22:44:54.000Z</published>
-    <updated>2017-03-19T19:05:12.714Z</updated>
+    <updated>2017-03-19T19:06:07.181Z</updated>
     
     <content type="html"><![CDATA[<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hoxo</a>出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br><a id="more"></a>  </p>
 <h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git下载</a></p>
