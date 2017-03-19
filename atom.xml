@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jzm1994.github.com/"/>
-  <updated>2017-03-19T22:01:41.633Z</updated>
+  <updated>2017-03-19T22:17:54.200Z</updated>
   <id>https://jzm1994.github.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://jzm1994.github.com/2017/03/20/%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E6%A1%86%E6%9E%B6-Glide/"/>
     <id>https://jzm1994.github.com/2017/03/20/图片加载框架-Glide/</id>
     <published>2017-03-19T21:07:08.000Z</published>
-    <updated>2017-03-19T22:01:41.633Z</updated>
+    <updated>2017-03-19T22:17:54.200Z</updated>
     
     <content type="html"><![CDATA[<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>在泰国举行的谷歌开发者论坛上，谷歌为我们介绍了一个名叫 Glide 的图片加载库，作者bumptech。这个库被广泛的运用在google的开源项目中，包括2014年google I/O大会上发布的官方app。<br><a href="https://github.com/bumptech/glide" target="_blank" rel="external">Github地址</a><br><a id="more"></a></p>
 <h2 id="一-简介"><a href="#一-简介" class="headerlink" title="一 简介"></a>一 简介</h2><ul>
@@ -61,6 +61,30 @@
 <li><p>对请求状态进行监听：</p>
 </li>
 <li>对资源的下载进度进行监听： </li>
+</ol>
+<h4 id="5-API说明"><a href="#5-API说明" class="headerlink" title="5 API说明"></a>5 API说明</h4><ol>
+<li>thumbnail(float sizeMultiplier).<br>请求给定系数的缩略图。如果缩略图比全尺寸图先加载完，就显示缩略图，否则就不显示。系数sizeMultiplier必须在(0,1)之间，可以递归调用该方法。</li>
+<li>sizeMultiplier(float sizeMultiplier).<br>在加载资源之前给Target大小设置系数。</li>
+<li>diskCacheStrategy(DiskCacheStrategy strategy).<br>设置缓存策略。DiskCacheStrategy.SOURCE：缓存原始数据，DiskCacheStrategy.RESULT：缓存变换(如缩放、裁剪等)后的资源数据，DiskCacheStrategy.NONE：什么都不缓存，DiskCacheStrategy.ALL：缓存SOURC和RESULT。默认采用DiskCacheStrategy.RESULT策略，对于download only操作要使用DiskCacheStrategy.SOURCE。</li>
+<li>priority(Priority priority).<br>指定加载的优先级，优先级越高越优先加载，但不保证所有图片都按序加载。枚举Priority.IMMEDIATE，Priority.HIGH，Priority.NORMAL，Priority.LOW。默认为Priority.NORMAL。</li>
+<li>dontAnimate().<br>移除所有的动画。</li>
+<li>animate(int animationId).<br>在异步加载资源完成时会执行该动画。</li>
+<li>animate(ViewPropertyAnimation.Animator animator).<br>在异步加载资源完成时会执行该动画。</li>
+<li>placeholder(int resourceId).<br>设置资源加载过程中的占位Drawable。</li>
+<li>placeholder(Drawable drawable).<br>设置资源加载过程中的占位Drawable。</li>
+<li>fallback(int resourceId).<br>设置model为空时要显示的Drawable。如果没设置fallback，model为空时将显示error的Drawable，如果error的Drawable也没设置，就显示placeholder的Drawable。</li>
+<li>fallback(Drawable drawable).<br>设置model为空时显示的Drawable。</li>
+<li>error(int resourceId).<br>设置load失败时显示的Drawable。</li>
+<li>error(Drawable drawable).<br>设置load失败时显示的Drawable。</li>
+<li>listener(RequestListener&lt;? super ModelType, TranscodeType&gt; requestListener).<br>监听资源加载的请求状态，可以使用两个回调：onResourceReady(R resource, T model, Target<r> target, boolean isFromMemoryCache, boolean isFirstResource)和onException(Exception e, T model, Target&lt;R&gt; target, boolean isFirstResource)，但不要每次请求都使用新的监听器，要避免不必要的内存申请，可以使用单例进行统一的异常监听和处理。</r></li>
+<li>skipMemoryCache(boolean skip).<br>设置是否跳过内存缓存，但不保证一定不被缓存（比如请求已经在加载资源且没设置跳过内存缓存，这个资源就会被缓存在内存中）。</li>
+<li>override(int width, int height).<br>重新设置Target的宽高值（单位为pixel）。</li>
+<li>into(Y target). 设置资源将被加载到的Target。</li>
+<li>into(ImageView view).<br>设置资源将被加载到的ImageView。取消该ImageView之前所有的加载并释放资源。</li>
+<li>into(int width, int height).<br>后台线程加载时要加载资源的宽高值（单位为pixel）。</li>
+<li>preload(int width, int height).<br>预加载resource到缓存中（单位为pixel）。</li>
+<li>asBitmap().<br>无论资源是不是gif动画，都作为Bitmap对待。如果是gif动画会停在第一帧。</li>
+<li>asGif().<br>把资源作为GifDrawable对待。如果资源不是gif动画将会失败，会回调.error()。</li>
 </ol>
 <h2 id="三-使用步骤"><a href="#三-使用步骤" class="headerlink" title="三 使用步骤"></a>三 使用步骤</h2><h4 id="1-在build-gradle中添加依赖："><a href="#1-在build-gradle中添加依赖：" class="headerlink" title="1. 在build.gradle中添加依赖："></a>1. 在build.gradle中添加依赖：</h4><p><code>compile &#39;com.github.bumptech.glide:glide:3.7.0&#39;</code></p>
 <h4 id="2-如果你的项目没有support-v4库，还需要添加support-v4依赖："><a href="#2-如果你的项目没有support-v4库，还需要添加support-v4依赖：" class="headerlink" title="2. 如果你的项目没有support-v4库，还需要添加support-v4依赖："></a>2. 如果你的项目没有support-v4库，还需要添加support-v4依赖：</h4><p><code>compile &#39;com.android.support:support-v4:23.3.0&#39;</code></p>
