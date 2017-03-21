@@ -107,7 +107,7 @@
 <meta property="og:url" content="https://jzm1994.github.com/2017/03/18/Hexo-GitHub搭建个人博客/index.html">
 <meta property="og:site_name" content="Snail琳子">
 <meta property="og:description" content="摘要hoxo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。">
-<meta property="og:updated_time" content="2017-03-19T19:06:07.181Z">
+<meta property="og:updated_time" content="2017-03-21T14:46:57.853Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+GitHub搭建个人博客">
 <meta name="twitter:description" content="摘要hoxo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。">
@@ -473,7 +473,11 @@
 <ol>
 <li>在hexo\themes\modernist\layout_partial\post下新建jiathis.ejs文件</li>
 <li>注册加网获得你的分享代码，写入jiathis.ejs  </li>
-<li>在hexo\themes\modernist\layout_partial\article.ejs中，添加&lt;%-partial(‘post/jiathis’)%&gt;。<h4 id="404"><a href="#404" class="headerlink" title="404"></a>404</h4>GitHub Pages自定义404页面直接在根目录下创建404.html。404页面仅对绑定顶级域名的项目才起作用，GitHub默认分配的二级域名和使用hexo s在本机调试都不起作用。<br><a href="http://www.qq.com/404" target="_blank" rel="external">腾讯公益404</a><h4 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h4><a href="https://portal.qiniu.com/create" target="_blank" rel="external">七牛云</a>存储图片提供图片外链。<h4 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h4></li>
+<li>在hexo\themes\modernist\layout_partial\article.ejs中，添加&lt;%-partial(‘post/jiathis’)%&gt;。</li>
+</ol>
+<h4 id="404"><a href="#404" class="headerlink" title="404"></a>404</h4><p>GitHub Pages自定义404页面直接在根目录下创建404.html。404页面仅对绑定顶级域名的项目才起作用，GitHub默认分配的二级域名和使用hexo s在本机调试都不起作用。<br><a href="http://www.qq.com/404" target="_blank" rel="external">腾讯公益404</a></p>
+<h4 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h4><p><a href="https://portal.qiniu.com/create" target="_blank" rel="external">七牛云</a>存储图片提供图片外链。</p>
+<h4 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h4><ol>
 <li>RSS<br><code>npm install hexo-generator-feed --save</code><br>开启RSS<br><code>rss: /atom.xml</code></li>
 </ol>
 <h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><p>更新hexo:<br><code>npm update -g hexo</code><br>更新主题:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cd</span> themes/<span class="keyword">next</span></div><div class="line">git pull</div></pre></td></tr></table></figure></p>
