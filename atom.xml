@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jzm1994.github.com/"/>
-  <updated>2017-03-19T23:09:56.608Z</updated>
+  <updated>2017-03-24T02:15:23.119Z</updated>
   <id>https://jzm1994.github.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://jzm1994.github.com/2017/03/20/XUtils3%E8%81%94%E7%BD%91%E6%A8%A1%E5%9D%97/"/>
     <id>https://jzm1994.github.com/2017/03/20/XUtils3联网模块/</id>
     <published>2017-03-19T22:33:01.000Z</published>
-    <updated>2017-03-19T23:09:56.608Z</updated>
+    <updated>2017-03-24T02:15:23.119Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><a id="more"></a>
+    <content type="html"><![CDATA[<a id="more"></a>
 <h2 id="联网"><a href="#联网" class="headerlink" title="联网"></a>联网</h2><h4 id="Get请求"><a href="#Get请求" class="headerlink" title="Get请求"></a>Get请求</h4><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">void</span> <span class="title">getDataByGet_Post</span><span class="params">()</span> </span>&#123;</div><div class="line">RequestParams request = <span class="keyword">new</span></div><div class="line">RequestParams(<span class="string">"http://api.m.mtime.cn/PageSubArea/TrailerList.api"</span>);</div><div class="line">x.http().get(request, <span class="keyword">new</span> Callback.CommonCallback&lt;String&gt;() &#123;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onSuccess</span><span class="params">(String result)</span> </span>&#123;</div><div class="line">LogUtil.e(<span class="string">"onSuccess-result=="</span> + result);</div><div class="line">Toast.makeText(xUtils3NetActivity.<span class="keyword">this</span>, <span class="string">"result=="</span> + result,</div><div class="line">Toast.LENGTH_SHORT).show();</div><div class="line">textView.setText(result+<span class="string">""</span>);</div><div class="line">&#125;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable ex, <span class="keyword">boolean</span> isOnCallback)</span> </span>&#123;</div><div class="line">LogUtil.e(<span class="string">"onError=="</span> + ex.getMessage());</div><div class="line">&#125;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onCancelled</span><span class="params">(CancelledException cex)</span> </span>&#123;</div><div class="line">LogUtil.e(<span class="string">"onCancelled=="</span> + cex.getMessage());</div><div class="line">&#125;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onFinished</span><span class="params">()</span> </span>&#123;</div><div class="line">LogUtil.e(<span class="string">"onFinished=="</span>);</div><div class="line">&#125;</div><div class="line">&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="Post请求"><a href="#Post请求" class="headerlink" title="Post请求"></a>Post请求</h4><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">void</span> <span class="title">getDataByGet_Post</span><span class="params">()</span> </span>&#123;</div><div class="line">RequestParams request = <span class="keyword">new</span></div><div class="line">RequestParams(<span class="string">"http://api.m.mtime.cn/PageSubArea/TrailerList.api"</span>);</div><div class="line">x.http().post(request, <span class="keyword">new</span> Callback.CommonCallback&lt;String&gt;() &#123;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onSuccess</span><span class="params">(String result)</span> </span>&#123;</div><div class="line">LogUtil.e(<span class="string">"onSuccess-result=="</span> + result);</div><div class="line">Toast.makeText(xUtils3NetActivity.<span class="keyword">this</span>, <span class="string">"result=="</span> + result,</div><div class="line">Toast.LENGTH_SHORT).show();</div><div class="line">textView.setText(result+<span class="string">""</span>);</div><div class="line">&#125;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable ex, <span class="keyword">boolean</span> isOnCallback)</span> </span>&#123;</div><div class="line">LogUtil.e(<span class="string">"onError=="</span> + ex.getMessage());</div><div class="line">&#125;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onCancelled</span><span class="params">(CancelledException cex)</span> </span>&#123;</div><div class="line">LogUtil.e(<span class="string">"onCancelled=="</span> + cex.getMessage());</div><div class="line">&#125;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onFinished</span><span class="params">()</span> </span>&#123;</div><div class="line">LogUtil.e(<span class="string">"onFinished=="</span>);</div><div class="line">&#125;</div><div class="line">&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="文件下载-amp-断点续传"><a href="#文件下载-amp-断点续传" class="headerlink" title="文件下载&amp;断点续传"></a>文件下载&amp;断点续传</h4><figure class="highlight d"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">*  下载文件</div><div class="line">*/</div><div class="line"><span class="keyword">private</span> <span class="keyword">void</span> downloadfile() &#123;</div><div class="line"><span class="keyword">final</span> RequestParams reqest = <span class="keyword">new</span></div><div class="line">RequestParams(<span class="string">"http://vfx.mtime.cn/Video/2016/09/02/mp4/160902093947207</span></div><div class="line">009_480.mp4");</div><div class="line">reqest.setAutoRename(<span class="literal">false</span>);<span class="comment">// 设置是否根据头信息自动命名文件</span></div><div class="line">reqest.setSaveFilePath(Environment.getExternalStorageDirectory() +</div><div class="line"><span class="string">"/atguigu/oppo.mp4"</span>);</div><div class="line">reqest.setExecutor(<span class="keyword">new</span> PriorityExecutor(<span class="number">3</span>, <span class="literal">true</span>));<span class="comment">// 自定义线程池 , 有效</span></div><div class="line">的值范围 [<span class="number">1</span>, <span class="number">3</span>],  设置为 <span class="number">3</span> 时 ,  可能阻塞图片加载 .</div><div class="line">reqest.setCancelFast(<span class="literal">true</span>);<span class="comment">// 是否可以被立即停止 .</span></div><div class="line">x.http().get(reqest, <span class="keyword">new</span> Callback.ProgressCallback&lt;File&gt;() &#123;</div><div class="line"><span class="keyword">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> onSuccess(File result) &#123;</div><div class="line">LogUtil.e(<span class="string">"onSuccess- 下载文件成功"</span>+result.toString());</div><div class="line">&#125;</div><div class="line"><span class="keyword">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> onError(Throwable ex, boolean isOnCallback) &#123;</div><div class="line">LogUtil.e(<span class="string">"onError- 下载文件失败"</span>+ex.getMessage());</div><div class="line">&#125;</div><div class="line"><span class="keyword">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> onCancelled(CancelledException cex) &#123;</div><div class="line">LogUtil.e(<span class="string">"onCancelled-"</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> onFinished() &#123;</div><div class="line">LogUtil.e(<span class="string">"onFinished-"</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> onWaiting() &#123;</div><div class="line">LogUtil.e(<span class="string">"onWaiting-"</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> onStarted() &#123;</div><div class="line">LogUtil.e(<span class="string">"onStarted-"</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> onLoading(<span class="built_in">long</span> total, <span class="built_in">long</span> current, boolean</div><div class="line">isDownloading) &#123;</div><div class="line">progressBar.setMax((<span class="keyword">int</span>) total);</div><div class="line">progressBar.setProgress((<span class="keyword">int</span>) current);</div><div class="line">LogUtil.e(<span class="string">"onLoading-"</span>+current+<span class="string">"/"</span>+total);</div><div class="line">&#125;</div><div class="line">&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -30,7 +30,8 @@
     
     <summary type="html">
     
-      &lt;h4 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h4&gt;
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;联网&quot;&gt;&lt;a href=&quot;#联网&quot; class=&quot;headerlink&quot; title=&quot;联网&quot;&gt;&lt;/a&gt;联网&lt;/h2&gt;&lt;h4 id=&quot;Get请求&quot;&gt;&lt;a href=&quot;#Get请求&quot; class=&quot;headerlink&quot; titl
     
     </summary>
     
@@ -44,9 +45,9 @@
     <link href="https://jzm1994.github.com/2017/03/20/%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E6%A1%86%E6%9E%B6-Glide/"/>
     <id>https://jzm1994.github.com/2017/03/20/图片加载框架-Glide/</id>
     <published>2017-03-19T21:07:08.000Z</published>
-    <updated>2017-03-19T22:17:54.200Z</updated>
+    <updated>2017-03-24T02:15:38.298Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>在泰国举行的谷歌开发者论坛上，谷歌为我们介绍了一个名叫 Glide 的图片加载库，作者bumptech。这个库被广泛的运用在google的开源项目中，包括2014年google I/O大会上发布的官方app。<br><a href="https://github.com/bumptech/glide" target="_blank" rel="external">Github地址</a><br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>在泰国举行的谷歌开发者论坛上，谷歌为我们介绍了一个名叫 Glide 的图片加载库，作者bumptech。这个库被广泛的运用在google的开源项目中，包括2014年google I/O大会上发布的官方app。<br><a href="https://github.com/bumptech/glide" target="_blank" rel="external">Github地址</a><br><a id="more"></a></p>
 <h2 id="一-简介"><a href="#一-简介" class="headerlink" title="一 简介"></a>一 简介</h2><ul>
 <li>使用简单</li>
 <li>可配置度高，自适应程度高</li>
@@ -118,7 +119,7 @@
     
     <summary type="html">
     
-      &lt;h4 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h4&gt;&lt;p&gt;在泰国举行的谷歌开发者论坛上，谷歌为我们介绍了一个名叫 Glide 的图片加载库，作者bumptech。这个库被广泛的运用在google的开源项目中，包括2014年google I/O大会上发布的官方app。&lt;br&gt;&lt;a href=&quot;https://github.com/bumptech/glide&quot;&gt;Github地址&lt;/a&gt;&lt;br&gt;
+      &lt;p&gt;在泰国举行的谷歌开发者论坛上，谷歌为我们介绍了一个名叫 Glide 的图片加载库，作者bumptech。这个库被广泛的运用在google的开源项目中，包括2014年google I/O大会上发布的官方app。&lt;br&gt;&lt;a href=&quot;https://github.com/bumptech/glide&quot;&gt;Github地址&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
@@ -134,9 +135,9 @@
     <link href="https://jzm1994.github.com/2017/03/20/MarkdownPad-%E6%B3%A8%E5%86%8C%E7%A0%81/"/>
     <id>https://jzm1994.github.com/2017/03/20/MarkdownPad-注册码/</id>
     <published>2017-03-19T20:54:56.000Z</published>
-    <updated>2017-03-19T21:04:35.286Z</updated>
+    <updated>2017-03-24T02:15:16.506Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><a id="more"></a>
+    <content type="html"><![CDATA[<a id="more"></a>
 <p><strong>邮箱：</strong></p>
 <p>Soar360@live.com</p>
 <p><strong>授权秘钥：</strong></p>
@@ -145,7 +146,11 @@
     
     <summary type="html">
     
-      &lt;h4 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h4&gt;
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;邮箱：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Soar360@live.com&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;授权秘钥：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i
     
     </summary>
     
@@ -161,13 +166,14 @@
     <link href="https://jzm1994.github.com/2017/03/18/%E5%9B%BE/"/>
     <id>https://jzm1994.github.com/2017/03/18/图/</id>
     <published>2017-03-18T06:08:05.000Z</published>
-    <updated>2017-03-19T15:56:45.957Z</updated>
+    <updated>2017-03-24T02:16:40.962Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><a id="more"></a> ]]></content>
+    <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/#/m/song?id=32507038&userid=118757845"></iframe><br><a id="more"></a> </p>
+]]></content>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h4&gt;
+      &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=298 height=52 src=&quot;http://music.163.com/#/m/song?id=32507038&amp;userid=118757845&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
     
     </summary>
     
@@ -179,9 +185,9 @@
     <link href="https://jzm1994.github.com/2017/03/18/Hexo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>https://jzm1994.github.com/2017/03/18/Hexo-GitHub搭建个人博客/</id>
     <published>2017-03-17T22:44:54.000Z</published>
-    <updated>2017-03-21T14:46:57.853Z</updated>
+    <updated>2017-03-24T02:15:09.520Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hoxo</a>出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br><a id="more"></a>  </p>
+    <content type="html"><![CDATA[<p><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hoxo</a>出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br><a id="more"></a>  </p>
 <h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git下载</a></p>
 <h4 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h4><p>两种方式安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>  :  </p>
 <ol>
@@ -221,7 +227,7 @@
 <h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><p>hexo n [layout] “博客标题” = hexo new [layout] “博客标题”  #新建文章 layout指布局 默认是post<br>hexo p = hexo public<br>hexo g = hexo generate #生成静态网页至public目录<br>hexo s = hexo service #启动服务本地预览<br>hexo d = hexo deploy #部署到Github/Coding<br>hexo clean #网页不能正常显示清除缓存<br>hexo g -d #复合命令<br>hexo new page “pageName” #新建页面</p>
 <h2 id="细节配置"><a href="#细节配置" class="headerlink" title="细节配置"></a>细节配置</h2><h4 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h4><p><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NextT主题</a><br>        git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next<br>启用NextT主题，打开hexo_config.yml，修改 theme 字段<br>        theme: next<br>打开hexo\themes\next，编辑主题配置文件_config.yml</p>
 <h4 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h4><p>在hexo\themes\modernist\layout_partial\head.ejs下，找到这句：<br>        <link rel="icon" type="image/x-icon" href="<%- config.root %>favicon.ico"><br>将favicon.ico放到工程hexo\source下。可以在<a href="http://www.faviconer.com/" target="_blank" rel="external">Faviconer</a>制作ico图标，国内有<a href="http://www.bitbug.net/" target="_blank" rel="external">比特虫</a>。  </p>
-<h4 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h4><p>以上是文章摘要 <!--more--> 以下是余下全文 </p>
+<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>以上是文章摘要 <!--more--> 以下是余下全文 </p>
 <h4 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h4><p><a href="http://ibruce.info/2013/12/22/count-views-of-hexo/" target="_blank" rel="external">为hexo博客添加访问次数统计功能</a>  </p>
 <h4 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h4><p><a href="http://duoshuo.com/" target="_blank" rel="external">多说第三方评论系统</a>  </p>
 <ol>
@@ -257,7 +263,7 @@
     
     <summary type="html">
     
-      &lt;h4 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/index.html&quot;&gt;hoxo&lt;/a&gt;出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。&lt;br&gt;
+      &lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/index.html&quot;&gt;hoxo&lt;/a&gt;出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。&lt;br&gt;
     
     </summary>
     

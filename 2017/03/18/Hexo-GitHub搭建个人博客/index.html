@@ -101,16 +101,16 @@
 
 
 
-<meta name="description" content="摘要hoxo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。">
+<meta name="description" content="hoxo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+GitHub搭建个人博客">
 <meta property="og:url" content="https://jzm1994.github.com/2017/03/18/Hexo-GitHub搭建个人博客/index.html">
 <meta property="og:site_name" content="Snail琳子">
-<meta property="og:description" content="摘要hoxo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。">
-<meta property="og:updated_time" content="2017-03-21T14:46:57.853Z">
+<meta property="og:description" content="hoxo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。">
+<meta property="og:updated_time" content="2017-03-24T02:15:09.520Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+GitHub搭建个人博客">
-<meta name="twitter:description" content="摘要hoxo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。">
+<meta name="twitter:description" content="hoxo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。">
 
 
 
@@ -221,6 +221,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -421,7 +431,7 @@
       
 
       
-        <h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hoxo</a>出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br><a id="more"></a>  </p>
+        <p><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hoxo</a>出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br><a id="more"></a>  </p>
 <h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git下载</a></p>
 <h4 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h4><p>两种方式安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>  :  </p>
 <ol>
@@ -461,7 +471,7 @@
 <h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><p>hexo n [layout] “博客标题” = hexo new [layout] “博客标题”  #新建文章 layout指布局 默认是post<br>hexo p = hexo public<br>hexo g = hexo generate #生成静态网页至public目录<br>hexo s = hexo service #启动服务本地预览<br>hexo d = hexo deploy #部署到Github/Coding<br>hexo clean #网页不能正常显示清除缓存<br>hexo g -d #复合命令<br>hexo new page “pageName” #新建页面</p>
 <h2 id="细节配置"><a href="#细节配置" class="headerlink" title="细节配置"></a>细节配置</h2><h4 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h4><p><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NextT主题</a><br>        git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next<br>启用NextT主题，打开hexo_config.yml，修改 theme 字段<br>        theme: next<br>打开hexo\themes\next，编辑主题配置文件_config.yml</p>
 <h4 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h4><p>在hexo\themes\modernist\layout_partial\head.ejs下，找到这句：<br>        <link rel="icon" type="image/x-icon" href="<%- config.root %>favicon.ico"><br>将favicon.ico放到工程hexo\source下。可以在<a href="http://www.faviconer.com/" target="_blank" rel="external">Faviconer</a>制作ico图标，国内有<a href="http://www.bitbug.net/" target="_blank" rel="external">比特虫</a>。  </p>
-<h4 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h4><p>以上是文章摘要 <!--more--> 以下是余下全文 </p>
+<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>以上是文章摘要 <!--more--> 以下是余下全文 </p>
 <h4 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h4><p><a href="http://ibruce.info/2013/12/22/count-views-of-hexo/" target="_blank" rel="external">为hexo博客添加访问次数统计功能</a>  </p>
 <h4 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h4><p><a href="http://duoshuo.com/" target="_blank" rel="external">多说第三方评论系统</a>  </p>
 <ol>
@@ -713,7 +723,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#摘要"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境搭建"><span class="nav-number"></span> <span class="nav-text">环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Git"><span class="nav-number">1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Node"><span class="nav-number">2.</span> <span class="nav-text">安装Node</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Hexo"><span class="nav-number">3.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub"><span class="nav-number"></span> <span class="nav-text">GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取公钥详解"><span class="nav-number">1.</span> <span class="nav-text">获取公钥详解</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看博客"><span class="nav-number"></span> <span class="nav-text">查看博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number"></span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo目录结构"><span class="nav-number">1.</span> <span class="nav-text">hexo目录结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#config-yml简介："><span class="nav-number">2.</span> <span class="nav-text">_config.yml简介：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo-themes-简介："><span class="nav-number">3.</span> <span class="nav-text">hexo\themes\简介：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令"><span class="nav-number"></span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#细节配置"><span class="nav-number"></span> <span class="nav-text">细节配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主题"><span class="nav-number">1.</span> <span class="nav-text">主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图标"><span class="nav-number">2.</span> <span class="nav-text">图标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#摘要-1"><span class="nav-number">3.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#统计"><span class="nav-number">4.</span> <span class="nav-text">统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#评论"><span class="nav-number">5.</span> <span class="nav-text">评论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分享"><span class="nav-number">6.</span> <span class="nav-text">分享</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#404"><span class="nav-number">7.</span> <span class="nav-text">404</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图床"><span class="nav-number">8.</span> <span class="nav-text">图床</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插件"><span class="nav-number">9.</span> <span class="nav-text">插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新"><span class="nav-number">10.</span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#申请域名"><span class="nav-number">11.</span> <span class="nav-text">申请域名</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建过程出现问题"><span class="nav-number"></span> <span class="nav-text">搭建过程出现问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo博客，解析不了标题（-）"><span class="nav-number">1.</span> <span class="nav-text">Hexo博客，解析不了标题（#）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#localhost-4000测试不成功"><span class="nav-number">2.</span> <span class="nav-text">localhost: 4000测试不成功</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo-g-执行报错"><span class="nav-number">3.</span> <span class="nav-text">hexo g: 执行报错</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number"></span> <span class="nav-text">参考文献</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境搭建"><span class="nav-number">1.</span> <span class="nav-text">环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Git"><span class="nav-number">1.0.1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Node"><span class="nav-number">1.0.2.</span> <span class="nav-text">安装Node</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.0.3.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub"><span class="nav-number">2.</span> <span class="nav-text">GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取公钥详解"><span class="nav-number">2.0.1.</span> <span class="nav-text">获取公钥详解</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看博客"><span class="nav-number">3.</span> <span class="nav-text">查看博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">4.</span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo目录结构"><span class="nav-number">4.0.1.</span> <span class="nav-text">hexo目录结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#config-yml简介："><span class="nav-number">4.0.2.</span> <span class="nav-text">_config.yml简介：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo-themes-简介："><span class="nav-number">4.0.3.</span> <span class="nav-text">hexo\themes\简介：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令"><span class="nav-number">5.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#细节配置"><span class="nav-number">6.</span> <span class="nav-text">细节配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主题"><span class="nav-number">6.0.1.</span> <span class="nav-text">主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图标"><span class="nav-number">6.0.2.</span> <span class="nav-text">图标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#摘要"><span class="nav-number">6.0.3.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#统计"><span class="nav-number">6.0.4.</span> <span class="nav-text">统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#评论"><span class="nav-number">6.0.5.</span> <span class="nav-text">评论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分享"><span class="nav-number">6.0.6.</span> <span class="nav-text">分享</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#404"><span class="nav-number">6.0.7.</span> <span class="nav-text">404</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图床"><span class="nav-number">6.0.8.</span> <span class="nav-text">图床</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插件"><span class="nav-number">6.0.9.</span> <span class="nav-text">插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新"><span class="nav-number">6.0.10.</span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#申请域名"><span class="nav-number">6.0.11.</span> <span class="nav-text">申请域名</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建过程出现问题"><span class="nav-number">7.</span> <span class="nav-text">搭建过程出现问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo博客，解析不了标题（-）"><span class="nav-number">7.0.1.</span> <span class="nav-text">Hexo博客，解析不了标题（#）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#localhost-4000测试不成功"><span class="nav-number">7.0.2.</span> <span class="nav-text">localhost: 4000测试不成功</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo-g-执行报错"><span class="nav-number">7.0.3.</span> <span class="nav-text">hexo g: 执行报错</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">8.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
@@ -735,7 +745,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy;  2016-2017 - 
+  &copy; 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
