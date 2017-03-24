@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jzm1994.github.com/"/>
-  <updated>2017-03-24T02:15:23.119Z</updated>
+  <updated>2017-03-24T02:40:05.567Z</updated>
   <id>https://jzm1994.github.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://jzm1994.github.com/2017/03/20/XUtils3%E8%81%94%E7%BD%91%E6%A8%A1%E5%9D%97/"/>
     <id>https://jzm1994.github.com/2017/03/20/XUtils3联网模块/</id>
     <published>2017-03-19T22:33:01.000Z</published>
-    <updated>2017-03-24T02:15:23.119Z</updated>
+    <updated>2017-03-24T02:40:05.567Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>
 <h2 id="联网"><a href="#联网" class="headerlink" title="联网"></a>联网</h2><h4 id="Get请求"><a href="#Get请求" class="headerlink" title="Get请求"></a>Get请求</h4><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">void</span> <span class="title">getDataByGet_Post</span><span class="params">()</span> </span>&#123;</div><div class="line">RequestParams request = <span class="keyword">new</span></div><div class="line">RequestParams(<span class="string">"http://api.m.mtime.cn/PageSubArea/TrailerList.api"</span>);</div><div class="line">x.http().get(request, <span class="keyword">new</span> Callback.CommonCallback&lt;String&gt;() &#123;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onSuccess</span><span class="params">(String result)</span> </span>&#123;</div><div class="line">LogUtil.e(<span class="string">"onSuccess-result=="</span> + result);</div><div class="line">Toast.makeText(xUtils3NetActivity.<span class="keyword">this</span>, <span class="string">"result=="</span> + result,</div><div class="line">Toast.LENGTH_SHORT).show();</div><div class="line">textView.setText(result+<span class="string">""</span>);</div><div class="line">&#125;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable ex, <span class="keyword">boolean</span> isOnCallback)</span> </span>&#123;</div><div class="line">LogUtil.e(<span class="string">"onError=="</span> + ex.getMessage());</div><div class="line">&#125;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onCancelled</span><span class="params">(CancelledException cex)</span> </span>&#123;</div><div class="line">LogUtil.e(<span class="string">"onCancelled=="</span> + cex.getMessage());</div><div class="line">&#125;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onFinished</span><span class="params">()</span> </span>&#123;</div><div class="line">LogUtil.e(<span class="string">"onFinished=="</span>);</div><div class="line">&#125;</div><div class="line">&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -135,7 +135,7 @@
     <link href="https://jzm1994.github.com/2017/03/20/MarkdownPad-%E6%B3%A8%E5%86%8C%E7%A0%81/"/>
     <id>https://jzm1994.github.com/2017/03/20/MarkdownPad-注册码/</id>
     <published>2017-03-19T20:54:56.000Z</published>
-    <updated>2017-03-24T02:15:16.506Z</updated>
+    <updated>2017-03-24T02:39:55.893Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>
 <p><strong>邮箱：</strong></p>
